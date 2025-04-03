@@ -1,7 +1,7 @@
 
 import image1 from '../svg/hero/icon1.svg'
-import image2 from '../svg/hero/icon+bg2.svg'
-import image3 from '../svg/hero/icon+bg3.svg'
+import image2 from '../svg/hero/icon2.svg'
+import image3 from '../svg/hero/icon3.svg'
 
 
 function Hero (){
