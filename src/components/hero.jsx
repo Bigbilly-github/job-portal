@@ -1,5 +1,5 @@
 
-import image1 from '../svg/hero/icon+bg1.svg'
+import image1 from '../svg/hero/icon1.svg'
 import image2 from '../svg/hero/icon+bg2.svg'
 import image3 from '../svg/hero/icon+bg3.svg'
 
