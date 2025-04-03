@@ -33,7 +33,7 @@ function Hero (){
                 <h1 className="lg:w-[903px] lg:h-[80px] sm:w-[553px]  md:w-[653px] w-[453px] h-[60px] text-center font-fig  md:text-[50px] sm:text-[40px] text-[30px] lg:text-[70px] text-white font-bold mb-0 ">
                 Find Your Dream Job Today!
                 </h1> 
-                <p className="lg:w-[903px] lg:h-[22px] sm:w-[553px]   md:w-[653px] w-[453px] h-[44px] mb-0 font-fig text-[18px] font-medium text-center lg:mt-[24px]  md:mt-[15px] text-white ">
+                <p className="lg:w-[903px] lg:h-[22px] sm:w-[553px]   md:w-[653px] w-[403px] h-[44px] mb-0 font-fig text-[18px]  font-medium text-center lg:mt-[24px]  md:mt-[15px] text-white ">
                 Connecting Talent with Opportunity: Your Gateway to Career Success
                 </p>
                 <div className="mt-[40px] mb-0 flex  lg:flex-row">
