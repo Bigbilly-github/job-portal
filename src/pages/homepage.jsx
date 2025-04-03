@@ -1,5 +1,6 @@
 import Header from "../components/header"
 import Hero from "../components/hero"
+import Sponsors from "../components/sponsors"
 
 
 
@@ -10,6 +11,7 @@ function Homepage (){
         <Header/>
         <main>
             <Hero/>
+            <Sponsors/>
         </main>
         </>
     )
