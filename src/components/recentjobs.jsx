@@ -14,7 +14,7 @@ function RecentJobs (){
 
     return(
         <>
-        <section className="w-[100vw] h-[1618px] bg-white lg:px-[72px] px-[70px] pt-[60px] ">
+        <section className="w-[100vw] h-[1618px] bg-white lg:px-[72px] px-[50px] pt-[60px] ">
             <h1 className="lg:w-[507px] h-[35px] font-fig  text-[28px] text-center lg:text-left lg:text-[50px] font-bold">
             Recent Jobs Available
             </h1>
