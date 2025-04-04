@@ -1,4 +1,4 @@
-
+import Jobs from '../jobs'
 import telecommunications from '../svg/categories/telecommunications.svg'
 import commerce from '../svg/categories/commerce.svg'
 import education from '../svg/categories/education.svg'
@@ -11,32 +11,43 @@ function Categories (){
     const categoryArray = [
         {
             image:telecommunications,
-            text:"Telecommunications"
+            text:"Telecommunications",
+            category:"telecommunications"
            
         },
         {
             image:commerce,
-            text:"Commerce"
+            text:"Commerce",
+            category:"commerce"
         },
         {
             image:education,
-            text:"Education"
+            text:"Education",
+            category:"education"
         },
         {
             image:financials,
-            text:"Financials"
+            text:"Financials",
+            category:"finance"
         },
         {
             image:hotels,
-            text:"Hotels"
+            text:"Hotels",
+            category:"hotels"
         },
         {
             image:transport,
-            text:"Transport"
+            text:"Transport",
+            category:"transport"
         }
     ]
 
-    function GetCount (category){
+    function GetCount (category,Jobs){
+        const categoryName= category.category;
+       const newJobs=  Jobs.filter((job)=> job.category===categoryName);
+        return newJobs.length;
+
+
     
     }
 
@@ -55,7 +66,7 @@ function Categories (){
                         </h1>
                         <button className='w-[98px] cursor-pointer  bg-[#30968910] px-[12px] pt-[10px]  font-fig font-normal text-[16px] text-[#309689] pb-[10px] '>
                            
-                                 1234 jobs
+                                 {GetCount(category,Jobs)} jobs
                                
                              
                         </button>
