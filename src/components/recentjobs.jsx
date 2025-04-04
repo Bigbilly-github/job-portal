@@ -13,6 +13,8 @@ import Jobs from '../jobs'
 
 function RecentJobs (){
 
+    
+
     const getLogo = (category) => {
         switch (category) {
           case 'hotels': return logo;

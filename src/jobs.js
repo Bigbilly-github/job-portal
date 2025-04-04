@@ -421,6 +421,591 @@ const Jobs = [
 
 
 },
+{
+    category: "transport",
+    role: "Logistics Coordinator",
+    type: "on-site",
+    employment: "full-time",
+    salary: "52000",
+    location: "Georgia, USA",
+    company: "RapidFreight Logistics",
+    experience: "2",
+    description:
+      "As a Logistics Coordinator, you will manage shipment schedules, communicate with carriers, and ensure on-time delivery across domestic and international routes. You'll be responsible for updating shipment tracking and handling documentation for inbound/outbound cargo. Strong organizational and communication skills are key to success in this role.",
+    responsibilities: [
+      "Schedule and track shipments.",
+      "Coordinate with vendors and clients.",
+      "Maintain transportation records.",
+      "Ensure compliance with shipping regulations."
+    ],
+    requirements: [
+      "Knowledge of logistics systems.",
+      "Time management.",
+      "Excellent communication skills.",
+      "Attention to detail."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Transport Customer Support Agent",
+    type: "remote",
+    employment: "part-time",
+    salary: "28000",
+    location: "Colorado, USA",
+    company: "FleetConnect",
+    experience: "1",
+    description:
+      "Provide virtual support to drivers, fleet managers, and customers by handling delivery inquiries, routing issues, and ticket resolutions. Work with dispatchers and logistics teams to resolve problems in real time.",
+    responsibilities: [
+      "Respond to support queries.",
+      "Monitor fleet updates.",
+      "Escalate critical delivery issues.",
+      "Maintain customer satisfaction metrics."
+    ],
+    requirements: [
+      "Strong problem-solving abilities.",
+      "Customer service experience.",
+      "Familiarity with CRM tools.",
+      "Ability to multitask remotely."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Fleet Manager",
+    type: "on-site",
+    employment: "full-time",
+    salary: "60000",
+    location: "Texas, USA",
+    company: "TransRoute Inc.",
+    experience: "3",
+    description:
+      "Oversee the company’s fleet operations including maintenance schedules, driver management, fuel consumption, and cost tracking. You’ll also lead compliance and safety initiatives to improve efficiency and reduce costs.",
+    responsibilities: [
+      "Supervise fleet performance and maintenance.",
+      "Manage driver schedules and compliance.",
+      "Track operational costs.",
+      "Lead safety initiatives and inspections."
+    ],
+    requirements: [
+      "Experience with fleet management systems.",
+      "Strong organizational skills.",
+      "Leadership and supervisory skills.",
+      "Knowledge of transport regulations."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Delivery Driver",
+    type: "on-site",
+    employment: "part-time",
+    salary: "19000",
+    location: "Oregon, USA",
+    company: "GoGreen Couriers",
+    experience: "1",
+    description:
+      "Deliver parcels within city routes using eco-friendly vehicles. Ensure packages are handled with care and delivered on time while maintaining professional communication with clients.",
+    responsibilities: [
+      "Load and unload delivery vehicles.",
+      "Follow route plans and traffic laws.",
+      "Deliver packages to customers on time.",
+      "Ensure proper vehicle care and reporting."
+    ],
+    requirements: [
+      "Valid driver’s license.",
+      "Good knowledge of city routes.",
+      "Strong punctuality and reliability.",
+      "Basic communication skills."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Freight Planner",
+    type: "remote",
+    employment: "full-time",
+    salary: "48000",
+    location: "Remote, Canada",
+    company: "NorthFlow Freight",
+    experience: "2",
+    description:
+      "Develop efficient transport routes across Canada and the US. Analyze freight costs and optimize multi-stop deliveries using planning software and real-time data.",
+    responsibilities: [
+      "Plan shipping routes for cost-efficiency.",
+      "Coordinate with carriers and suppliers.",
+      "Use logistics software to monitor routes.",
+      "Prepare freight efficiency reports."
+    ],
+    requirements: [
+      "Experience with route optimization tools.",
+      "Strong data analysis skills.",
+      "Knowledge of freight logistics.",
+      "Proficiency in Excel and scheduling tools."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Transportation Safety Officer",
+    type: "on-site",
+    employment: "full-time",
+    salary: "67000",
+    location: "Illinois, USA",
+    company: "MetroFleet Safety",
+    experience: "3",
+    description:
+      "Monitor and enforce safety protocols for all fleet drivers and transportation personnel. Conduct inspections and provide training on accident prevention and regulatory compliance.",
+    responsibilities: [
+      "Conduct safety audits and investigations.",
+      "Develop and implement safety procedures.",
+      "Train transport staff on safety compliance.",
+      "Manage accident reporting and analysis."
+    ],
+    requirements: [
+      "Familiarity with DOT regulations.",
+      "Excellent observation and reporting skills.",
+      "Training or safety certification.",
+      "Attention to detail and regulatory knowledge."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Transport Dispatcher",
+    type: "on-site",
+    employment: "full-time",
+    salary: "45000",
+    location: "Arizona, USA",
+    company: "SunHaul Logistics",
+    experience: "2",
+    description:
+      "Coordinate daily pick-ups and deliveries for a fleet of over 50 vehicles. Maintain driver schedules, update route changes, and respond to on-road emergencies.",
+    responsibilities: [
+      "Assign routes and delivery tasks.",
+      "Monitor live location of drivers.",
+      "Communicate delays and route changes.",
+      "Maintain accurate driver logs."
+    ],
+    requirements: [
+      "Excellent communication skills.",
+      "Experience in dispatch operations.",
+      "Familiarity with GPS tracking tools.",
+      "Ability to work under pressure."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Transportation Analyst",
+    type: "remote",
+    employment: "full-time",
+    salary: "55000",
+    location: "Remote, USA",
+    company: "RouteSmart AI",
+    experience: "2",
+    description:
+      "Use analytics tools to optimize transport strategies for clients. Review shipment trends, forecast costs, and create reports that improve overall efficiency.",
+    responsibilities: [
+      "Analyze transportation data and KPIs.",
+      "Identify cost-saving opportunities.",
+      "Build dashboards and reports.",
+      "Recommend transport optimizations."
+    ],
+    requirements: [
+      "Strong Excel or Tableau skills.",
+      "Data-driven mindset.",
+      "Knowledge of supply chain operations.",
+      "Analytical and critical thinking."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Warehouse Loader",
+    type: "on-site",
+    employment: "part-time",
+    salary: "22000",
+    location: "Manchester, UK",
+    company: "SwiftShip UK",
+    experience: "1",
+    description:
+      "Handle physical loading and unloading of packages for short-haul and cross-country deliveries. Operate forklifts and maintain safety standards in a fast-paced warehouse.",
+    responsibilities: [
+      "Organize and load packages efficiently.",
+      "Operate forklifts and handling gear.",
+      "Label and track inventory.",
+      "Follow safety protocols."
+    ],
+    requirements: [
+      "Physical strength and endurance.",
+      "Warehouse experience.",
+      "Forklift certification (preferred).",
+      "Ability to follow directions carefully."
+    ]
+  },
+  {
+    category: "transport",
+    role: "Ride-hailing Operations Assistant",
+    type: "remote",
+    employment: "part-time",
+    salary: "25000",
+    location: "Lagos, Nigeria",
+    company: "MoveFast Africa",
+    experience: "1",
+    description:
+      "Provide backend support for a ride-hailing platform. Review trip logs, communicate with drivers, handle onboarding processes, and resolve passenger issues virtually.",
+    responsibilities: [
+      "Support driver onboarding and documents.",
+      "Resolve rider or trip issues.",
+      "Monitor app data for fraud detection.",
+      "Collaborate with the ops and tech team."
+    ],
+    requirements: [
+      "Basic CRM tool knowledge.",
+      "Good communication skills.",
+      "Tech-savvy and detail-oriented.",
+      "Customer service experience preferred."
+    ]
+  },
+  {
+    category: "commerce",
+    role: "Retail Store Manager",
+    type: "on-site",
+    employment: "full-time",
+    salary: "54000",
+    location: "New York, USA",
+    company: "UrbanTrends",
+    experience: "2",
+    description: "The Retail Store Manager oversees daily operations, manages a team, handles inventory, and drives sales targets. You’ll be responsible for maintaining customer satisfaction and ensuring store profitability. You must possess excellent leadership and organizational skills.",
+    responsibilities: [
+      "Supervise staff and delegate tasks.",
+      "Monitor inventory and restock.",
+      "Handle customer issues professionally.",
+      "Meet monthly sales targets."
+    ],
+    requirements: [
+      "Leadership experience.",
+      "Knowledge of POS systems.",
+      "Strong interpersonal skills.",
+      "Retail experience."
+    ]
+  },
+  {
+    category: "commerce",
+    role: "E-commerce Support Specialist",
+    type: "remote",
+    employment: "part-time",
+    salary: "32000",
+    location: "Lagos, Nigeria",
+    company: "SwiftCart",
+    experience: "1",
+    description: "Provide customer and technical support for an e-commerce platform. Resolve order issues, assist with product queries, and update customer records. A fast-paced virtual environment requiring good communication skills.",
+    responsibilities: [
+      "Respond to email/chat inquiries.",
+      "Process returns and exchanges.",
+      "Update order status.",
+      "Collaborate with fulfillment teams."
+    ],
+    requirements: [
+      "Customer service background.",
+      "Basic data entry skills.",
+      "Familiarity with e-commerce systems.",
+      "Attention to detail."
+    ]
+  },
+  {
+    category: "commerce",
+    role: "Inventory Analyst",
+    type: "on-site",
+    employment: "full-time",
+    salary: "49000",
+    location: "California, USA",
+    company: "RetailEdge",
+    experience: "2",
+    description: "Analyze inventory trends and optimize stock levels to minimize losses and overstocking. Work closely with procurement and warehouse teams to forecast product demand.",
+    responsibilities: [
+      "Track and report on inventory metrics.",
+      "Forecast demand using data.",
+      "Recommend stock adjustments.",
+      "Coordinate with vendors and buyers."
+    ],
+    requirements: [
+      "Excel proficiency.",
+      "Data analysis experience.",
+      "Retail knowledge.",
+      "Attention to detail."
+    ]
+  },
+  {
+    category: "commerce",
+    role: "Procurement Officer",
+    type: "on-site",
+    employment: "full-time",
+    salary: "53000",
+    location: "Texas, USA",
+    company: "Commodex",
+    experience: "2",
+    description: "Oversee purchasing processes, supplier relationships, and ensure procurement meets organizational quality and budgetary standards. The role includes contract negotiations and order follow-ups.",
+    responsibilities: [
+      "Negotiate with vendors.",
+      "Track procurement KPIs.",
+      "Ensure timely order fulfillment.",
+      "Maintain purchase records."
+    ],
+    requirements: [
+      "Strong negotiation skills.",
+      "Knowledge of supply chain.",
+      "Budgeting skills.",
+      "Organizational skills."
+    ]
+  },
+  {
+    category: "commerce",
+    role: "Sales Representative",
+    type: "remote",
+    employment: "part-time",
+    salary: "29000",
+    location: "Manchester, UK",
+    company: "GlobalMart",
+    experience: "1",
+    description: "Connect with potential customers to pitch products, follow up leads, and drive sales. This is a virtual role ideal for individuals with great communication skills and target-driven mindset.",
+    responsibilities: [
+      "Call prospective clients.",
+      "Handle objections and close sales.",
+      "Update CRM records.",
+      "Meet sales goals."
+    ],
+    requirements: [
+      "Good phone etiquette.",
+      "CRM knowledge.",
+      "Sales experience preferred.",
+      "Goal-oriented mindset."
+    ]
+  },
+  {
+    category: "education",
+    role: "Online Math Tutor",
+    type: "remote",
+    employment: "part-time",
+    salary: "25000",
+    location: "Lagos, Nigeria",
+    company: "EduBridge Tutors",
+    experience: "1",
+    description: "Deliver virtual math lessons to high school students. Create lesson plans, administer quizzes, and provide performance feedback. Strong communication and time management skills required.",
+    responsibilities: [
+      "Prepare and deliver virtual lessons.",
+      "Track student progress.",
+      "Provide academic support.",
+      "Communicate with parents."
+    ],
+    requirements: [
+      "Degree in Mathematics/Education.",
+      "Good internet connection.",
+      "Strong communication skills.",
+      "Teaching experience preferred."
+    ]
+  },
+  {
+    category: "education",
+    role: "School Administrator",
+    type: "on-site",
+    employment: "full-time",
+    salary: "50000",
+    location: "Illinois, USA",
+    company: "Bright Future High",
+    experience: "3",
+    description: "Manage school operations, including staff supervision, budgeting, and compliance. A leadership role for professionals with administrative experience in the education sector.",
+    responsibilities: [
+      "Oversee staff and operations.",
+      "Manage school records.",
+      "Ensure regulatory compliance.",
+      "Budget planning."
+    ],
+    requirements: [
+      "Education admin experience.",
+      "Leadership skills.",
+      "Strong organizational abilities.",
+      "Knowledge of school systems."
+    ]
+  },
+  {
+    category: "education",
+    role: "English Language Instructor",
+    type: "on-site",
+    employment: "full-time",
+    salary: "46000",
+    location: "Manchester, UK",
+    company: "Lexicon Language School",
+    experience: "2",
+    description: "Teach English to non-native speakers in structured classes. Focus on grammar, conversation, reading, and writing skills in immersive environments.",
+    responsibilities: [
+      "Deliver English lessons.",
+      "Create lesson materials.",
+      "Assess student performance.",
+      "Maintain records."
+    ],
+    requirements: [
+      "Degree in English or related field.",
+      "TESOL/TEFL certification.",
+      "Excellent communication.",
+      "Experience in language teaching."
+    ]
+  },
+  {
+    category: "education",
+    role: "Curriculum Developer",
+    type: "remote",
+    employment: "full-time",
+    salary: "52000",
+    location: "New York, USA",
+    company: "SkillEd Labs",
+    experience: "2",
+    description: "Design and review digital learning content for K-12 and college-level courses. Collaborate with instructors and designers to develop interactive material.",
+    responsibilities: [
+      "Create course outlines.",
+      "Review educational content.",
+      "Ensure content meets standards.",
+      "Collaborate with SMEs."
+    ],
+    requirements: [
+      "Background in education.",
+      "Experience in curriculum design.",
+      "Detail-oriented.",
+      "Content writing skills."
+    ]
+  },
+  {
+    category: "education",
+    role: "ICT Instructor",
+    type: "on-site",
+    employment: "full-time",
+    salary: "45000",
+    location: "Texas, USA",
+    company: "NextGen Schools",
+    experience: "2",
+    description: "Teach ICT fundamentals including coding, Microsoft Office, and internet safety to high school students. Hands-on sessions and lab supervision are key parts of this role.",
+    responsibilities: [
+      "Teach ICT curriculum.",
+      "Assess student assignments.",
+      "Maintain ICT lab equipment.",
+      "Provide tech support during class."
+    ],
+    requirements: [
+      "Degree in Computer Science or Education.",
+      "Passion for teaching tech.",
+      "Strong classroom management.",
+      "ICT teaching experience preferred."
+    ]
+  },
+  {
+    category: "telecommunication",
+    role: "Network Technician",
+    type: "on-site",
+    employment: "full-time",
+    salary: "55000",
+    location: "California, USA",
+    company: "FiberLink Networks",
+    experience: "2",
+    description: "Install, maintain, and troubleshoot network hardware and connections for residential and business customers. Ideal for hands-on professionals with solid knowledge of cabling and network topology.",
+    responsibilities: [
+      "Install and repair network systems.",
+      "Diagnose connection issues.",
+      "Maintain accurate service records.",
+      "Ensure high uptime rates."
+    ],
+    requirements: [
+      "Technical diploma in networking.",
+      "Field service experience.",
+      "Strong problem-solving.",
+      "Valid driver’s license."
+    ]
+  },
+  {
+    category: "telecommunication",
+    role: "Customer Support Officer",
+    type: "remote",
+    employment: "part-time",
+    salary: "30000",
+    location: "Lagos, Nigeria",
+    company: "TalkNet NG",
+    experience: "1",
+    description: "Assist customers with SIM activation, network complaints, and service upgrades. Use ticketing systems to log and resolve queries quickly and effectively.",
+    responsibilities: [
+      "Handle customer queries.",
+      "Log complaints into CRM.",
+      "Follow up on technical issues.",
+      "Promote new services."
+    ],
+    requirements: [
+      "Customer service experience.",
+      "Basic tech understanding.",
+      "Fluent in English.",
+      "CRM knowledge preferred."
+    ]
+  },
+  {
+    category: "telecommunication",
+    role: "RF Engineer",
+    type: "on-site",
+    employment: "full-time",
+    salary: "67000",
+    location: "Texas, USA",
+    company: "SignalWave",
+    experience: "3",
+    description: "Design and optimize radio frequency (RF) networks for voice and data coverage. Work with infrastructure teams to enhance signal strength and troubleshoot network interference.",
+    responsibilities: [
+      "Conduct site surveys.",
+      "Optimize RF network design.",
+      "Resolve frequency conflicts.",
+      "Maintain signal integrity."
+    ],
+    requirements: [
+      "Degree in Telecommunications or EE.",
+      "RF planning tools knowledge.",
+      "3+ years experience.",
+      "Analytical mindset."
+    ]
+  },
+  {
+    category: "telecommunication",
+    role: "Telecom Project Coordinator",
+    type: "remote",
+    employment: "full-time",
+    salary: "58000",
+    location: "Illinois, USA",
+    company: "TeleCore Solutions",
+    experience: "2",
+    description: "Manage timelines, budgets, and documentation for telecom infrastructure rollouts. Coordinate with vendors, engineers, and clients to ensure timely project completion.",
+    responsibilities: [
+      "Track project milestones.",
+      "Coordinate team tasks.",
+      "Prepare reports for stakeholders.",
+      "Monitor budgets and timelines."
+    ],
+    requirements: [
+      "Project coordination experience.",
+      "Knowledge of telecom systems.",
+      "Proficiency with Excel and Gantt charts.",
+      "Strong communication."
+    ]
+  },
+  {
+    category: "telecommunication",
+    role: "Field Installation Engineer",
+    type: "on-site",
+    employment: "full-time",
+    salary: "49000",
+    location: "Manchester, UK",
+    company: "NetServ UK",
+    experience: "2",
+    description: "Deploy and configure customer-side telecom equipment including routers, VOIP phones, and wireless APs. Maintain post-installation support and training.",
+    responsibilities: [
+      "Install and configure hardware.",
+      "Provide on-site support.",
+      "Document installation logs.",
+      "Test system performance."
+    ],
+    requirements: [
+      "Networking certifications (CompTIA, CCNA).",
+      "Field installation experience.",
+      "Customer interaction skills.",
+      "Willingness to travel locally."
+    ]
+  }
 
 
 
