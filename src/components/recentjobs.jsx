@@ -35,7 +35,7 @@ function RecentJobs (){
             {Jobs.slice(0,5).map((job,index)=>    <div key={index}  className="w-full lg:h-[223px] sm:h-[520px] h-[581px] px-[40px] py-[40px] shadow-md mb-[24px] mt-[60px] rounded-[10px]">
                 <div className="lg:w-full flex flex-col lg:gap-[30px] justify-between lg:justify-start sm:h-[420px] h-[465px]   lg:h-[171px] ">
                     <div className="flex  flex-col lg:flex-row w-[401px] gap-[20px] h-[51px] lg:items-center">
-                        <img src={getLogo(job.category)} alt=""  className='w-[40px] h-[40px]'/>
+                        <img src={getLogo(job.category)} alt={`${job.category} icon`}  className='w-[40px] h-[40px]'/>
                         <div className="flex flex-col h-[51px] ">
                             <h2 className='sm:w-[331px] w-[273px]  h-auto  font-fig font-semibold text-[28px]'>
                             {job.role}
