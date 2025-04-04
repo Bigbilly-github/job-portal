@@ -1,6 +1,4 @@
-
-
-export const jobs = [
+const Jobs = [
     {
         company:"Global Retail Solutions",
         role:"Sales Manager",
@@ -429,4 +427,6 @@ export const jobs = [
 
 
 
-]
+];
+
+export default Jobs
