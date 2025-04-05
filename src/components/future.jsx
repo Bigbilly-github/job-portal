@@ -20,7 +20,7 @@ function Future (){
                     </button>
 
                 </div>
-                <div className='hidden lg:block w-[45vw]'>
+                <div className='hidden lg:block w-[40vw]'>
                     <img src={image} alt=""  className='w-[600px] h-[480px]  rounded-[20px] rounded-l-none'/>
                 </div>
 
