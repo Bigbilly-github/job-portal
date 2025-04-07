@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Hero from "../components/hero"
 import RecentJobs from "../components/recentjobs"
 import Sponsors from "../components/sponsors"
+import Testimonial from "../components/testimonial"
 
 
 
@@ -18,6 +19,7 @@ function Homepage (){
             <RecentJobs/>
             <Categories/>
             <Future/>
+            <Testimonial/>
        
         </main>
         </>
