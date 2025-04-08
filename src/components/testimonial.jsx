@@ -1,28 +1,30 @@
 import stars from '../svg/testimonial/Stars.svg'
 import Quotes from '../svg/testimonial/Quotes.svg'
-import avatar from '../svg/testimonial/Avatar.svg'
+import image1 from '../img/testimonial/img2.jpeg'
+import image2 from '../img/testimonial/img3.jpeg'
+import image3 from '../img/testimonial/profileimg.jpeg'
 
 function Testimonial (){
     const Testimonials = [
         {
-            image:avatar,
+            image:image1,
             headlinetext:"Amazing services",
-            subtext:"Metus faucibus sed turpis lectus feugiat tincidunt. Rhoncus sed tristique in dolor. Mus etiam et vestibulum venenatis",
+            subtext:"This platform made my job search so much easier. The layout is intuitive, the filters are spot-on, and I found relevant opportunities within minutes. It’s a game changer!.",
             name:"Marco Ascensio",
 
         },
 
         {
-            image:avatar,
+            image:image2,
             headlinetext:"Everything simple",
-            subtext:"Metus faucibus sed turpis lectus feugiat tincidunt. Rhoncus sed tristique in dolor. Mus etiam et vestibulum venenatis",
-            name:"Kristin Hester",
+            subtext:"The speed, responsiveness, and modern design of this job portal are impressive. It’s refreshing to see a platform that focuses equally on functionality and user experience.",
+            name:"Sam Adebayo",
 
         },
         {
-            image:avatar,
+            image:image3,
             headlinetext:"Awesome, thank you!",
-            subtext:"Metus faucibus sed turpis lectus feugiat tincidunt. Rhoncus sed tristique in dolor. Mus etiam et vestibulum venenatis",
+            subtext:"As a fresh graduate, I found it tough navigating job boards—until I landed here. This portal connected me to internships I didn’t even know existed!.",
             name:"Zion Cisneros",
 
         },
@@ -51,7 +53,7 @@ function Testimonial (){
                     </p>
                     <div className='lg:w-[331px]  w-[90%] flex h-[100px] items-end justify-between mt-[20px]'>
                         <div className='flex w-[172px] h-[64px] items-center gap-[16px]'>
-                            <img src={testimony.image} alt="profile image of a testifier" />
+                            <img src={testimony.image} alt="profile image of a testifier" className='w-[50px] h-[50px] rounded-[50%]' />
                             <div className='flex flex-col  w-[98px] h-[50px] gap-[10px]'>
                                 <p className='w-[138px] h-[15px] font-fig font-semibold text-[16px] '>
                                {testimony.name}

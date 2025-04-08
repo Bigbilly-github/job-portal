@@ -1,4 +1,5 @@
 import Categories from "../components/categories"
+import Footer from "../components/footer"
 import Future from "../components/future"
 import Header from "../components/header"
 import Hero from "../components/hero"
@@ -22,6 +23,7 @@ function Homepage (){
             <Testimonial/>
        
         </main>
+        <Footer/>
         </>
     )
 
