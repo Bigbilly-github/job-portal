@@ -17,7 +17,7 @@ function Testimonial (){
         {
             image:image2,
             headlinetext:"Everything simple",
-            subtext:"The speed, responsiveness, and modern design of this job portal are impressive. It’s refreshing to see a platform that focuses equally on functionality and user experience.",
+            subtext:"The speed, responsiveness, and modern design of this job portal are impressive.Great to see a platform that focuses on functionality and user experience.",
             name:"Sam Adebayo",
 
         },
