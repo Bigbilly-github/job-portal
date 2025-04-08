@@ -9,7 +9,7 @@ function Testimonial (){
         {
             image:image1,
             headlinetext:"Amazing services",
-            subtext:"This platform made my job search so much easier. The layout is intuitive, the filters are spot-on, and I found relevant opportunities within minutes. It’s a game changer!.",
+            subtext:"This platform made my job search so much easier. I found relevant opportunities within minutes.",
             name:"Marco Ascensio",
 
         },
@@ -42,7 +42,7 @@ function Testimonial (){
 
             </div>
             <div className="xl:w-[1296px] lg:w-[900px] xl:h-[400px] lg:h-[900px]  w-[85vw]  grid xl:grid-cols-3 lg:grid-cols-2 gap-[24px]">
-              {Testimonials.map((testimony,index) =>   <div key={index} className="lg:w-[416px] w-800vw] h-[400px] bg-white rounded-[20px] flex flex-col  py-[40px] pl-[40px]">
+              {Testimonials.map((testimony,index) =>   <div key={index} className="lg:w-[416px] w-800vw] h-[400px] bg-white rounded-[20px] mb-[10px] flex flex-col  py-[40px] pl-[40px]">
                     <img src={stars} alt="stars icon" className='w-[151px] h-[24px] mb-0 ' />
                     <h1 className='lg:w-[257px] w-[90%] h-[17px] font-fig font-semibold text-[24px] mt-[24px]'>
                     {testimony.headlinetext}
