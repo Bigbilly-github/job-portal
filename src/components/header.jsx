@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import logo from '../svg/header/logo.svg'
 
 function Header (){
@@ -17,8 +17,8 @@ function Header (){
 
                 <nav className='lg:w-[386px] w-[300px] h-[27px] hidden md:block'>
                     <ul className=' flex justify-between '>
-                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="" >Home</a></li>
-                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="">Jobs</a></li>
+                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/" >Home</Link></li>
+                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/jobs">Jobs</Link></li>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="">About Us</a></li>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="">Contact Us</a></li>
                     </ul>
