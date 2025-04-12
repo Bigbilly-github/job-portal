@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-
-      <Jobs/>
+      <Homepage/>
+    
 
      
     </>

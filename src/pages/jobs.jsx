@@ -1,4 +1,5 @@
 import Header from "../components/header"
+import JobsBody from "../components/jobsbody"
 import JobsHero from "../components/jobshero"
 
 function Jobs (){
@@ -7,7 +8,12 @@ function Jobs (){
     return(
         <>
         <Header/>
-        <JobsHero text="Jobs"/>
+        <main>
+            <JobsHero text="Jobs"/>
+            <JobsBody/>
+
+        </main>
+       
         </>
     )
 

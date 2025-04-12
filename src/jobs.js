@@ -523,7 +523,7 @@ const Jobs = [
     type: "remote",
     employment: "full-time",
     salary: "48000",
-    location: "Remote, Canada",
+    location: "Toronto, Canada",
     company: "NorthFlow Freight",
     experience: "2",
     description:
@@ -595,7 +595,7 @@ const Jobs = [
     type: "remote",
     employment: "full-time",
     salary: "55000",
-    location: "Remote, USA",
+    location: "Texas, USA",
     company: "RouteSmart AI",
     experience: "2",
     description:
