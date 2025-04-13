@@ -9,9 +9,10 @@ function Header (){
             <div className=' w-[90vw] h-[60px] flex items-center justify-between'>
                 <div className='flex gap-[10px]'>
                     <img src={logo} alt="web logo icon" />
-                    <p className='font-fig text-[20px] font-semibold text-[#FFFFFF]'>
-                        Job Portal
-                    </p>
+                    <Link to="/">    <p className='font-fig text-[20px] font-semibold text-[#FFFFFF]'>
+                                Job Portal
+                            </p>
+                    </Link>
 
                 </div>
 

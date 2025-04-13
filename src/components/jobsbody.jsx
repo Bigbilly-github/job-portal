@@ -1,13 +1,9 @@
 import image from '../svg/jobsbody/Logo.svg'
-import logo from '../svg/recentjobs/Logo.svg'
-import logo1 from '../svg/recentjobs/Logo1.svg'
-import logo2 from '../svg/recentjobs/Logo2.svg'
-import logo3 from '../svg/recentjobs/Logo3.svg'
-import logo4 from '../svg/recentjobs/Logo4.svg'
-import briefcase from '../svg/recentjobs/briefcase.svg'
-import clock from '../svg/recentjobs/clock.svg'
-import location from '../svg/recentjobs/location.svg'
-import wallet from '../svg/recentjobs/wallet.svg'
+import briefcase from '../svg/jobsbody/briefcase.svg'
+import clock from '../svg/jobsbody/clock.svg'
+import wallet from '../svg/jobsbody/wallet.svg'
+import location from '../svg/jobsbody/location.svg'
+
 
 
 function JobsBody (){
@@ -30,15 +26,15 @@ function JobsBody (){
 
     return(
         <>
-        <section className="w-[100vw] h-auto bg-[#FFFFFF] px-[72px]  pt-[60px] gap-[24px] flex ">
-            <div className="w-[314px] h-[1400px] bg-[#EBF5F4] px-[20px] pt-[20px] rounded-[12px]">
+        <section className="w-[100vw] h-auto bg-[#FFFFFF] xl:px-[72px] md:px-[40px] sm:px-[30px]  pt-[60px] pb-[60px] gap-[24px] flex sm:flex-row flex-col sm:items-start items-center ">
+            <div className="md:w-[314px] sm:w-[250px] w-[90%] h-auto pb-[80px] bg-[#EBF5F4] px-[20px] pt-[20px] rounded-[12px]">
                 <h1 className=" font-fig font-semibold text-[20px] ">
                 Search Job By
                 </h1>
                 <p className="mt-[20px] font-fig font-semibold text-[20px]">
                     Location
                 </p>
-                <select name="location" id="location" className="px-[12px] py-[10px] border-0 mt-[12px] bg-[#FFFFFF] w-[265px] rounded-[12px] font-fig font-normal text-[16px] text-[#6C757D]">
+                <select name="location" id="location" className="px-[12px] py-[10px] border-0 mt-[12px] bg-[#FFFFFF]  w-[98%] block sm:w-[180px]  md:w-[265px] rounded-[12px] font-fig font-normal text-[16px] text-[#6C757D]">
                     <option value="" >Choose City</option>
                     <option value="California, USA">California, USA</option>
                     <option value="Colorado, USA">Colorado, USA</option>
@@ -52,7 +48,7 @@ function JobsBody (){
                     <option value="Toronto, Canada">Toronto, Canada</option>
                 </select>
 
-                <button className="bg-[#309689] hover:bg-[#424747] duration-150  w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
+                <button className="bg-[#309689] hover:bg-[#424747] duration-150 w-[98%] sm:w-[180px] md:w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
                     Show Jobs
                 </button>
 
@@ -66,7 +62,7 @@ function JobsBody (){
                     </div>
                     )}
 
-                    <button className="bg-[#309689] hover:bg-[#424747] duration-150  w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
+                    <button className="bg-[#309689] hover:bg-[#424747] duration-150  w-[98%] sm:w-[180px] md:w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
                         Show Jobs
                     </button>
                   
@@ -83,7 +79,7 @@ function JobsBody (){
 
                     </div>
                     )}
-                    <button className="bg-[#309689] hover:bg-[#424747] duration-150  w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
+                    <button className="bg-[#309689] hover:bg-[#424747] duration-150 w-[98%] sm:w-[180px]  md:w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
                         Show Jobs
                     </button>
 
@@ -93,11 +89,11 @@ function JobsBody (){
 
 
             </div>
-            <div className="w-[100%] h-[1400px] border   pt-[40px]"> 
-                <div className=" w-[100%] flex flex-col justify-center gap-[28px] items-center h-[251px] bg-[red]">
-                   <div className="w-[90%] h-[100px] bg-[green]  flex  gap-[20px] items-center ">
-                        <img src={image} alt="logo icon"  />
-                        <div className='flex flex-col '>
+            <div className="xl:w-[100%] sm:w-[80%] w-[90%]  h-auto   "> 
+                <div className=" w-[100%]  flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[500px] xl:h-[251px] ">
+                   <div className="w-[90%] h-[100px] flex xl:flex-row  flex-col gap-[10px] xl:gap-[20px] xl:items-center xl:mb-0 mb-[12px] ">
+                        <img src={image} alt="logo icon"  className='w-[40px] h-[40px]' />
+                        <div className='flex flex-col'>
                             <p className='font-fig font-semibold text-[28px]'>
                             Forward Security Director
                             </p>
@@ -108,11 +104,101 @@ function JobsBody (){
                         </div>
 
                    </div>
-                   <div className="w-[90%] h-[40px] bg-[brown]">
+                   <div className="w-[90%] xl:h-[50px]  flex gap-[30px]  xl:flex-row flex-col xl:justify-between xl:items-center   ">
+                        <div className='flex gap-[24px] xl:flex-row flex-col '>
+                            <div className='flex gap-[12px] items-center'>
+                                <img src={briefcase} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                    Hotels & Tourism
+                                </p>
+                            </div>
+
+                            <div className='flex gap-[12px]  items-center'>
+                                <img src={clock} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                 Full-Time
+                                </p>
+                            </div>
+
+                            <div className='flex gap-[12px]  items-center'>
+                                <img src={wallet} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                 $40000
+                                </p>
+                            </div>
+                            <div className='flex gap-[12px]  items-center'>
+                                <img src={location} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                 New York, USA
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <button className='xl:w-[121px] w-[98%] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
+                            Job Details
+                        </button>
 
                    </div>
 
                 </div>
+
+                <div className=" w-[100%]  flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[500px] xl:h-[251px] ">
+                   <div className="w-[90%] h-[100px] flex xl:flex-row  flex-col gap-[10px] xl:gap-[20px] xl:items-center xl:mb-0 mb-[12px] ">
+                        <img src={image} alt="logo icon"  className='w-[40px] h-[40px]' />
+                        <div className='flex flex-col'>
+                            <p className='font-fig font-semibold text-[28px]'>
+                            Forward Security Director
+                            </p>
+                            <p className='font-fig text-[16px]'>
+                            Bauch, Schuppe and Schulist Co
+                            </p>
+
+                        </div>
+
+                   </div>
+                   <div className="w-[90%] xl:h-[50px]  flex gap-[30px]  xl:flex-row flex-col xl:justify-between xl:items-center   ">
+                        <div className='flex gap-[24px] xl:flex-row flex-col '>
+                            <div className='flex gap-[12px] items-center'>
+                                <img src={briefcase} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                    Hotels & Tourism
+                                </p>
+                            </div>
+
+                            <div className='flex gap-[12px]  items-center'>
+                                <img src={clock} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                 Full-Time
+                                </p>
+                            </div>
+
+                            <div className='flex gap-[12px]  items-center'>
+                                <img src={wallet} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                 $40000
+                                </p>
+                            </div>
+                            <div className='flex gap-[12px]  items-center'>
+                                <img src={location} alt="" />
+                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                 New York, USA
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <button className='xl:w-[121px] w-[273px] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
+                            Job Details
+                        </button>
+
+                   </div>
+
+                </div>
+
+              
 
             </div>
 

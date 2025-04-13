@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import image from '../svg/footer/check.svg'
 
 function Footer (){
@@ -24,9 +24,9 @@ function Footer (){
                     <p className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
                         Contact Us
                     </p>
-                    <p className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
+                    <Link to="/jobs" className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
                        Jobs
-                    </p>
+                    </Link>
                 </div>
 
                 <div className='w-[306px] h-[198px] hidden md:block'>
