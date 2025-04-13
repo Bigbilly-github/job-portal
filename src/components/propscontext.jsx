@@ -10,8 +10,12 @@ const valueContext = createContext();
 
 function ContextProvider ({ children }){
 
-    const [value , setValue] = useState("commerce");
-    const [category, setCategory] = useState("jobtype");
+  const categoryOptions=["commerce", "hotels", "telecommunications", "education", "finance", "transport"];
+
+    const [value , setValue] = useState("remote");
+    const [category, setCategory] = useState("type");
+    const [limit, setLimit]= useState(5);
+    const [selectedOption, setSelectedOption] = useState('');
 
     function getLogo(category) {
         switch (category) {
@@ -31,12 +35,36 @@ function ContextProvider ({ children }){
         return newOption;
         
     }
+
+    function ChangeValue(id) {
+      const newCategory = id;
+      const newValue = document.querySelector(`#${id}`).value;
+      setCategory(newCategory);
+      setValue(newValue);
+    
+    
+
+    }
+
+    function HandleChange (e) {
+      setSelectedOption(e.target.value);
+    };
+
+    function AddSelectedOption (selectedOption,category){
+      const newCategory= category;
+      const newValue = selectedOption;
+      setValue(newValue);
+      setCategory(newCategory);
+
+    }
+
+
    
     
 
     return(
         <>
-         <valueContext.Provider value={{getLogo, value, setValue, category, setCategory, ToUp}}>
+         <valueContext.Provider value={{AddSelectedOption, categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
                  {children}
         </valueContext.Provider>
         </>

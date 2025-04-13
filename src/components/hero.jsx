@@ -1,11 +1,22 @@
 import { useValueContext } from "./propscontext";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import image1 from '../svg/hero/icon1.svg'
 import image2 from '../svg/hero/icon2.svg'
 import image3 from '../svg/hero/icon3.svg'
 
 
 function Hero (){
-    const {value, category} = useValueContext();
+    const {value, category, categoryOptions, ToUp, ChangeValue} = useValueContext();
+    const navigate = useNavigate();
+
+
+    function HandleClick (){
+        ChangeValue("category"); 
+        navigate("/jobs");
+             
+
+    }
 
     const details = [
         {
@@ -38,16 +49,14 @@ function Hero (){
                 Connecting Talent with Opportunity: Your Gateway to Career Success
                 </p>
                 <div className="mt-[40px] mb-0 flex  lg:flex-row">
-                        <select name="joboptions" id="" className="lg:w-[600px] md:w-[400px] sm:w-[300px] w-[150px] border-0 lg:px-[20px] px-[15px] text-center font-fig lg:text-[20px] text-[16px] font-medium text-slate-500 lg:h-[80px] h-[60px] rounded-r-none rounded-[16px] bg-white">
+                        <select name="category" id="category" className="lg:w-[600px] md:w-[400px] sm:w-[300px] w-[150px] border-0 lg:px-[20px] px-[15px] text-center font-fig lg:text-[20px] text-[16px] font-medium text-slate-500 lg:h-[80px] h-[60px] rounded-r-none rounded-[16px] bg-white">
                             <option value="">Select Job Category</option>
-                            <option value="commerce">Commerce</option>
-                            <option value="telecommunications"> Telecommunications</option>
-                            <option value="hotels">Hotels and Tourism</option>
-                            <option value="education">Education</option>
-                            <option value="finance">Financial Services</option>
+                           {categoryOptions.map((cat)=> <option value={cat}>{ToUp(cat)}</option>
+
+                           )}
                         </select>
-                        <button className="w-[174px] lg:h-[81px] h-[60px] font-fig border-0 bg-[#309689] hover:text-white  hover:bg-slate-600 text-white  lg:text-[20px] text-[16px] rounded-[16px] rounded-l-none">
-                           Search Job
+                        <button  onClick={HandleClick} className="w-[174px] lg:h-[81px] h-[60px] font-fig border-0 bg-[#309689] hover:text-white  hover:bg-slate-600 text-white  lg:text-[20px] text-[16px] rounded-[16px] rounded-l-none">
+                         Search Job
                         </button>
 
 
