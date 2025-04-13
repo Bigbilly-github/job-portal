@@ -93,7 +93,9 @@ function JobsBodyMain (){
             )}
 
             <div className="w-[100%] flex justify-center mt-[90px] ">
-                <a onClick={TurnSwitch} className={` ${plan ? "hidden" : "block"} hover:underline  font-semibold text-[24px] hover:text-black duration-150 cursor-pointer text-[#768088] `}>
+                <a onClick={TurnSwitch} className={` ${plan ? "hidden" :
+                                                     newJobs.length < 5 ? "hidden":
+                                                                         "block"}  hover:underline  font-semibold text-[24px] hover:text-black duration-150 cursor-pointer text-[#768088] `}>
                 SEE MORE
                 </a>
             </div>

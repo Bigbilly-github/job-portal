@@ -11,8 +11,7 @@ function Future (){
                     Create A Better Future For Yourself
                     </h1>
                     <p className='md:w-[600px] lg:w-[400px] sm:w-[400px] w-[300px] h-[34px] text-[#FFFFFF] md:mt-[40px] font-fig text-[16px]'>
-                    At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. 
-                    Blandit a massa elementum id scelerisque rhoncus
+                    Whether you're seeking a new career path or expanding your skillset, your future starts here. Let’s make it count.
                     </p>
 
                     <button className='mt-[62px] w-[122px] h-[40px] bg-[#309689] text-white  font-fig font-semibold text-[16px] rounded-[8px]'>
