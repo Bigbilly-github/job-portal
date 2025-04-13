@@ -1,10 +1,11 @@
-
+import { useValueContext } from "./propscontext";
 import image1 from '../svg/hero/icon1.svg'
 import image2 from '../svg/hero/icon2.svg'
 import image3 from '../svg/hero/icon3.svg'
 
 
 function Hero (){
+    const {value, category} = useValueContext();
 
     const details = [
         {

@@ -1,9 +1,5 @@
+import { useValueContext } from "./propscontext";
 
-import logo from '../svg/recentjobs/Logo.svg'
-import logo1 from '../svg/recentjobs/Logo1.svg'
-import logo2 from '../svg/recentjobs/Logo2.svg'
-import logo3 from '../svg/recentjobs/Logo3.svg'
-import logo4 from '../svg/recentjobs/Logo4.svg'
 import briefcase from '../svg/recentjobs/briefcase.svg'
 import clock from '../svg/recentjobs/clock.svg'
 import location from '../svg/recentjobs/location.svg'
@@ -12,18 +8,11 @@ import Jobs from '../jobs'
 
 
 function RecentJobs (){
+    const {getLogo} = useValueContext();
 
     
 
-    const getLogo = (category) => {
-        switch (category) {
-          case 'hotels': return logo;
-          case 'education': return logo1;
-          case 'financials': return logo2;
-          case 'commerce': return logo3;
-          default: return logo4;
-        }
-      };
+
       
       return(
         <>
