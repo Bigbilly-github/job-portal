@@ -1,4 +1,5 @@
 import { createContext,useContext, useState } from "react";
+
 import logo from '../svg/recentjobs/Logo.svg'
 import logo1 from '../svg/recentjobs/Logo1.svg'
 import logo2 from '../svg/recentjobs/Logo2.svg'
@@ -9,6 +10,8 @@ const valueContext = createContext();
 
 
 function ContextProvider ({ children }){
+
+ 
 
   const categoryOptions=["commerce", "hotels", "telecommunications", "education", "finance", "transport"];
 
@@ -41,6 +44,7 @@ function ContextProvider ({ children }){
       const newValue = document.querySelector(`#${id}`).value;
       setCategory(newCategory);
       setValue(newValue);
+     
     
     
 
@@ -55,6 +59,7 @@ function ContextProvider ({ children }){
       const newValue = selectedOption;
       setValue(newValue);
       setCategory(newCategory);
+    
 
     }
 

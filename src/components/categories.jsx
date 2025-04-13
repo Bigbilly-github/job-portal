@@ -1,4 +1,6 @@
 import Jobs from '../jobs'
+import { useValueContext } from "./propscontext";
+import { useNavigate } from 'react-router-dom';
 import telecommunications from '../svg/categories/telecommunications.svg'
 import commerce from '../svg/categories/commerce.svg'
 import education from '../svg/categories/education.svg'
@@ -8,6 +10,18 @@ import transport from '../svg/categories/transport.svg'
 
 function Categories (){
 
+    const navigate = useNavigate();
+      const {AddSelectedOption,setSelectedOption,selectedOption,setCategory,setValue} = useValueContext();
+
+      function HandleClick (value,category) {
+        setCategory(category);
+        setValue(value);
+        navigate("/jobs");
+     
+        
+      }
+
+      
     const categoryArray = [
         {
             image:telecommunications,
@@ -64,7 +78,7 @@ function Categories (){
                         <h1 className='font-fig font-semibold text-[24px] '>
                            {category.text}
                         </h1>
-                        <button className='w-[98px] cursor-pointer  bg-[#30968910] px-[12px] pt-[10px]  font-fig font-normal text-[16px] text-[#309689] pb-[10px] '>
+                        <button onClick={()=> HandleClick(category.category, "category")} className='w-[98px] cursor-pointer  bg-[#30968910] px-[12px] pt-[10px]  font-fig font-normal text-[16px] text-[#309689] pb-[10px] '>
                            
                                  {GetCount(category,Jobs)} jobs
                                

@@ -4,6 +4,7 @@ function JobsBodySidebar (){
 
    
     const jobType =["on-site", "remote"];
+    const employmentType =["full-time", "part-time"];
     const catOptions = ["Colorado, USA", "California, USA", "Georgia, USA", "Illinois, USA", "Manchester, UK", "New York, USA", "Texas, USA", "Lagos, Nigeria", "Toronto, Canada"]
    
     
@@ -60,6 +61,25 @@ function JobsBodySidebar (){
                     </div>
                     )}
                     <button onClick={()=>AddSelectedOption(selectedOption,"type")} className="bg-[#309689] hover:bg-[#424747] duration-150 w-[98%] sm:w-[180px]  md:w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
+                        Show Jobs
+                    </button>
+
+
+                  
+                </div>
+
+                <div className="mt-[25px] ">
+                    <p className="font-fig font-semibold text-[20px]">
+                    Status
+                    </p>
+                   {employmentType.map((type,index)=> <div key={index} className="flex gap-[10px] font-fig text-[16px] mt-[4px] items-center">
+                        <input type="radio" value={type}  id={type} name="employment" onChange={HandleChange} />
+                        <label htmlFor={type}>{ToUp(type)}</label>
+
+
+                    </div>
+                    )}
+                    <button onClick={()=>AddSelectedOption(selectedOption,"employment")} className="bg-[#309689] hover:bg-[#424747] duration-150 w-[98%] sm:w-[180px]  md:w-[266px] h-[40px] rounded-[8px] mt-[20px] font-fig font-semibold text-[16px] text-white">
                         Show Jobs
                     </button>
 

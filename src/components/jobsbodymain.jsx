@@ -24,7 +24,7 @@ function JobsBodyMain (){
     return(
         <>
           <div  className="xl:w-[100%] sm:w-[80%] w-[90%]  h-auto   "> 
-           { newJobs.slice(0,limit).map((job,index)=>  <div key={index}  className=" w-[100%]  flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[500px] xl:h-[251px] ">
+           { newJobs.slice(0,limit).map((job,index)=>  <div key={index}  className=" w-[100%]  flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[550px] xl:h-[251px] ">
                            <div className="w-[90%] md:h-[100px] h-[100px] flex xl:flex-row  flex-col gap-[10px] xl:gap-[20px] xl:items-center xl:mb-0 mb-[12px] ">
                                 <img src={getLogo(job.category)}  alt="logo icon"  className='w-[40px] h-[40px]' />
                                 <div className='flex flex-col'>
@@ -51,6 +51,13 @@ function JobsBodyMain (){
                                         <img src={clock} alt="" />
                                         <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
                                        {job.type}
+                                        </p>
+                                    </div>
+
+                                    <div className='flex gap-[12px]  items-center'>
+                                        <img src={clock} alt="" />
+                                        <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                       {job.employment}
                                         </p>
                                     </div>
         
@@ -91,7 +98,7 @@ function JobsBodyMain (){
                 </a>
             </div>
 
-          {  plan ?  newJobs.slice(limit,newJobs.length).map((job,index)=>  <div key={index}  className=" w-[100%]  flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[500px] xl:h-[251px] ">
+          {  plan ?  newJobs.slice(limit,newJobs.length).map((job,index)=>  <div key={index}  className=" w-[100%]  flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[550px] xl:h-[251px] ">
                            <div className="w-[90%] md:h-[100px] h-[140px] flex xl:flex-row  flex-col gap-[10px] xl:gap-[20px] xl:items-center xl:mb-0 mb-[12px] ">
                                 <img src={getLogo(job.category)}  alt="logo icon"  className='w-[40px] h-[40px]' />
                                 <div className='flex flex-col'>
@@ -118,6 +125,13 @@ function JobsBodyMain (){
                                         <img src={clock} alt="" />
                                         <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
                                        {job.type}
+                                        </p>
+                                    </div>
+
+                                    <div className='flex gap-[12px]  items-center'>
+                                        <img src={clock} alt="" />
+                                        <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
+                                       {job.employment}
                                         </p>
                                     </div>
         
