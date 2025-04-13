@@ -15,7 +15,7 @@ function Jobs (){
         <main>
             <JobsHero text="Jobs"/>
             <JobsBody/>
-            <Categories/>
+           
             <Future/>
             <Testimonial/>
 

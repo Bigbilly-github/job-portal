@@ -14,6 +14,10 @@ function Hero (){
     function HandleClick (){
         ChangeValue("category"); 
         navigate("/jobs");
+           
+    
+        
+      
              
 
     }
@@ -50,7 +54,7 @@ function Hero (){
                 </p>
                 <div className="mt-[40px] mb-0 flex  lg:flex-row">
                         <select name="category" id="category" className="lg:w-[600px] md:w-[400px] sm:w-[300px] w-[150px] border-0 lg:px-[20px] px-[15px] text-center font-fig lg:text-[20px] text-[16px] font-medium text-slate-500 lg:h-[80px] h-[60px] rounded-r-none rounded-[16px] bg-white">
-                            <option value="">Select Job Category</option>
+                            <option value="" disabled selected hidden>Select Job Category</option>
                            {categoryOptions.map((cat)=> <option value={cat}>{ToUp(cat)}</option>
 
                            )}

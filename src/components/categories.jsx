@@ -13,10 +13,19 @@ function Categories (){
     const navigate = useNavigate();
       const {AddSelectedOption,setSelectedOption,selectedOption,setCategory,setValue} = useValueContext();
 
+     
+
+
       function HandleClick (value,category) {
         setCategory(category);
         setValue(value);
-        navigate("/jobs");
+        if (category.trim() !=="" &&  value.trim() !=="" ){
+            navigate("/jobs");
+           
+    
+        }
+       
+     
      
         
       }

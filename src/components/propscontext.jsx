@@ -11,12 +11,20 @@ const valueContext = createContext();
 
 function ContextProvider ({ children }){
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 1100, 
+      behavior: "smooth",
+    });
+  };
+
+
  
 
   const categoryOptions=["commerce", "hotels", "telecommunications", "education", "finance", "transport"];
 
-    const [value , setValue] = useState("remote");
-    const [category, setCategory] = useState("type");
+    const [value , setValue] = useState("commerce");
+    const [category, setCategory] = useState("category");
     const [limit, setLimit]= useState(5);
     const [selectedOption, setSelectedOption] = useState('');
 
@@ -40,10 +48,26 @@ function ContextProvider ({ children }){
     }
 
     function ChangeValue(id) {
+
+      const screenWidth = window.innerWidth;
+     
+
       const newCategory = id;
       const newValue = document.querySelector(`#${id}`).value;
       setCategory(newCategory);
       setValue(newValue);
+      if (screenWidth < 500 ){
+        scrollToTop()
+       
+
+    }
+   ;
+
+     
+
+      
+
+
      
     
     
@@ -51,14 +75,25 @@ function ContextProvider ({ children }){
     }
 
     function HandleChange (e) {
-      setSelectedOption(e.target.value);
+      if (e.target.value.trim() !=="" ){
+    
+        setSelectedOption(e.target.value);
+
+    }
+   
     };
 
     function AddSelectedOption (selectedOption,category){
+      const screenWidth = window.innerWidth;
       const newCategory= category;
       const newValue = selectedOption;
       setValue(newValue);
       setCategory(newCategory);
+      if  (screenWidth < 500 ){
+        scrollToTop()
+       
+
+    }
     
 
     }
