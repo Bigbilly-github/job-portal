@@ -10,7 +10,7 @@ function JobsBodyMain (){
 
 
     const newJobs = Jobs.filter((job => job[category] === value));
-    console.log(newJobs);
+   
 
     function TurnSwitch (){
         setPlan(!plan);

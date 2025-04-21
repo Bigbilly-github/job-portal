@@ -71,7 +71,7 @@ function JobsDisplay ({getLogo,job, index}){
                 
                                    </div>
                 
-                                </div>
+            </div>
         </>
     )
 

@@ -17,10 +17,6 @@ function ContextProvider ({ children }){
       behavior: "smooth",
     });
   };
-
-
- 
-
   const categoryOptions=["commerce", "hotels", "telecommunications", "education", "finance", "transport"];
 
     const [value , setValue] = useState("commerce");
@@ -62,17 +58,7 @@ function ContextProvider ({ children }){
 
     }
    ;
-
-     
-
-      
-
-
-     
-    
-    
-
-    }
+}
 
     function HandleChange (e) {
       if (e.target.value.trim() !=="" ){
@@ -97,11 +83,6 @@ function ContextProvider ({ children }){
     
 
     }
-
-
-   
-    
-
     return(
         <>
          <valueContext.Provider value={{AddSelectedOption, categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
