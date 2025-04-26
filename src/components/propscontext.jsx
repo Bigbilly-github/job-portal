@@ -1,5 +1,6 @@
 import { createContext,useContext, useState } from "react";
 
+
 import logo from '../svg/recentjobs/Logo.svg'
 import logo1 from '../svg/recentjobs/Logo1.svg'
 import logo2 from '../svg/recentjobs/Logo2.svg'
@@ -80,12 +81,13 @@ function ContextProvider ({ children }){
        
 
     }
+
     
 
     }
     return(
         <>
-         <valueContext.Provider value={{AddSelectedOption, categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
+         <valueContext.Provider value={{AddSelectedOption,categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
                  {children}
         </valueContext.Provider>
         </>

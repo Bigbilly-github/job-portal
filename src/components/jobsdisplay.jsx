@@ -1,5 +1,5 @@
 
-
+import { useNavigate } from 'react-router-dom';
 import image from '../svg/jobsbody/Logo.svg'
 import briefcase from '../svg/jobsbody/briefcase.svg'
 import clock from '../svg/jobsbody/clock.svg'
@@ -9,6 +9,11 @@ import location from '../svg/jobsbody/location.svg'
 
 
 function JobsDisplay ({getLogo,job, index}){
+    const navigate = useNavigate();
+
+    const handleJobClick = (id) => {
+        navigate(`/jobs/${id}`);
+      };
 
     return(
         <>
@@ -65,7 +70,7 @@ function JobsDisplay ({getLogo,job, index}){
                 
                                         </div>
                 
-                                        <button className='xl:w-[121px] w-[98%] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
+                                        <button onClick={()=>handleJobClick(job.id)} className='xl:w-[121px] w-[98%] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
                                             Job Details
                                         </button>
                 

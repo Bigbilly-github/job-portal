@@ -1,5 +1,5 @@
 import { useValueContext } from "./propscontext";
-
+import { useNavigate } from 'react-router-dom';
 import briefcase from '../svg/recentjobs/briefcase.svg'
 import clock from '../svg/recentjobs/clock.svg'
 import location from '../svg/recentjobs/location.svg'
@@ -9,6 +9,10 @@ import Jobs from '../jobs'
 
 function RecentJobs (){
     const {getLogo} = useValueContext();
+    const navigate = useNavigate();
+    const handleJobClick = (id) => {
+        navigate(`/jobs/${id}`);
+      };
 
     
 
@@ -63,7 +67,7 @@ function RecentJobs (){
                                 </div>
 
                         </div>
-                        <button className='lg:w-[121px] w-[273px] sm:w-[320px] lg:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
+                        <button onClick={()=> handleJobClick(job.id)} className='lg:w-[121px] w-[273px] sm:w-[320px] lg:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
                             Job Details
                         </button>
                        

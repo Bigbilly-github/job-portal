@@ -1,12 +1,22 @@
 import briefcase from '../svg/jobsbody/briefcase.svg'
+import { useNavigate } from 'react-router-dom';
 import clock from '../svg/jobsbody/clock.svg'
 import wallet from '../svg/jobsbody/wallet.svg'
 import user from '../svg/jobdescription/user.svg'
 import experience from '../svg/jobdescription/expertise1.svg'
-
-
+import Jobs from '../jobs'
+import { useValueContext } from "./propscontext";
 import location from '../svg/jobsbody/location.svg'
-function JobDescription ( ) {
+
+
+function JobDescription ({job} ) {
+     const {getLogo} = useValueContext();
+     const navigate = useNavigate();
+     const handleJobClick = (id) => {
+        navigate(`/jobs/${id}`);
+      };
+
+    const relatedJobs= Jobs.filter((newjob)=>  newjob.category === job.category  );
 
     const options = [
         {
@@ -21,10 +31,7 @@ function JobDescription ( ) {
             image:briefcase,
             text:"Category"
         },
-        {
-            image:user,
-            text:"Job Title"
-        },
+  
         {
             image:experience,
             text:"Experience"
@@ -52,19 +59,15 @@ function JobDescription ( ) {
                     Job Description
                     </h1>
                     <p className="w-[100%] h-auto mt-[40px]">
-                    Nunc sed a nisl purus. Nibh dis faucibus proin lacus tristique. Sit congue non vitae odio sit erat in. Felis eu ultrices a sed massa. Commodo fringilla sed tempor risus laoreet ultricies ipsum. Habitasse morbi faucibus in iaculis lectus. Nisi enim feugiat enim volutpat. Sem quis viverra viverra odio mauris nunc. 
-                    Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augue lorem amet adipiscing cursus fames mauris. Tortor amet porta proin in. Orci imperdiet nisi dignissim pellentesque morbi vitae. Quisque tincidunt metus lectus porta eget blandit euismod sem nunc. Tortor gravida amet amet sapien mauris massa.Tortor varius nam maecenas duis blandit elit sit sit. Ante mauris morbi diam habitant donec.
+                  {job.description}
                     </p>
                     <div className="mt-[60px] w-[100%]  ">
                             <h1 className="mt-[60px] h-[17px] font-fig font-semibold text-[24px]">
                                 Key Responsibilities
                             </h1>
                             <ul className="mt-[45px] h-auto ">
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
+                                {job.responsibilities.map((responsibility,index)=>  <li key={index}  className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">{responsibility}</li>
+                                 )}                     
                             </ul>
 
                     </div>
@@ -74,11 +77,9 @@ function JobDescription ( ) {
                             Professional Skills
                             </h1>
                             <ul className="mt-[45px] h-auto ">
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
-                                <li className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">Et nunc ut tempus duis nisl sed massa. Ornare varius faucibus nisi vitae vitae cras ornare. Cras facilisis dignissim augu</li>
+                            {job.requirements.map((requirement,index)=> <li key={index} className="before:content-['✅'] before:mr-3 w-[100%] font-fig text-[16px]  ">{requirement}</li>
+                            )}
+                               
                             </ul>
 
                     </div>
@@ -102,9 +103,15 @@ function JobDescription ( ) {
                             <p className='font-fig font-semibold text-[16px]'>
                            {option.text}
                             </p>
-                            <p className='font-fig text-[16px]'>
-                            Corporate Solutions 
-                            Executive
+                            <p className='font-fig text-[16px] text-[#6C757D]'>
+                                {option.text === "Job Title" ? job.role :
+                                option.text === "Job Type" ? job.type :
+                                option.text === "Category" ? job.category :
+                                option.text === "Experience" ? `${job.experience} years` :
+                                option.text === "Salary" ? `$${job.salary}` :
+                                job.location
+
+                             }
                             </p>
 
                         </div>
@@ -121,22 +128,19 @@ function JobDescription ( ) {
                         </h1>
                         <div className="flex  gap-[24px] ">
                             <p className="py-[12px] px-[10px] rounded-[12px] font-fig  sm:text-[16px] text-[14px] text-[#309689] bg-[#30968910] w-auto">
-                                Full Time
+                               {job.type}
 
                             </p>
                             <p className="py-[12px] px-[10px] rounded-[12px] font-fig   sm:text-[16px] text-[14px]  text-[#309689] bg-[#30968910] w-auto">
-                               Commerce
+                              {job.category}
 
                             </p>
                             <p className="py-[12px] px-[10px] rounded-[12px] font-fig   sm:text-[16px] text-[14px]  text-[#309689] bg-[#30968910] w-auto">
-                              New York, USA
+                             {job.location}
 
                             </p>
                            
-                            <p className="py-[12px] px-[10px] rounded-[12px] font-fig  sm:text-[16px] text-[14px]  text-[#309689] bg-[#30968910] w-auto">
-                              role
 
-                            </p>
 
                         </div>
                     </div>
@@ -145,15 +149,15 @@ function JobDescription ( ) {
                             Related Jobs
                         </h1>
 
-                        <div   className=" w-[100%] mx-auto flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[550px] xl:h-[251px] ">
+                    { relatedJobs.slice(0,3).map((relatedJob,index)=>   <div   className=" w-[100%] mx-auto flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[550px] xl:h-[251px] ">
                                                                    <div className="xl:w-[92%] sm:w-[90%]  w-[85%] md:h-[100px] h-[150px] flex xl:flex-row  flex-col gap-[10px] xl:gap-[20px] xl:items-center xl:mb-0 mb-[12px] ">
-                                                                        <img src={clock}  alt="logo icon"  className='w-[40px] h-[40px]' />
+                                                                        <img src={getLogo(relatedJob.category)}  alt="logo icon"  className='w-[40px] h-[40px]' />
                                                                         <div className='flex flex-col'>
                                                                             <p className='font-fig font-semibold text-[28px]'>
-                                                                            Corporate Solutions Executive
+                                                                            {relatedJob.role}
                                                                             </p>
                                                                             <p className='font-fig text-[16px] h-[40px] mt-[10px] '>
-                                                                            Leffler and Son
+                                                                           {relatedJob.company}
                                                                             </p>
                                                 
                                                                         </div>
@@ -164,108 +168,50 @@ function JobDescription ( ) {
                                                                             <div className='flex gap-[12px] items-center'>
                                                                                 <img src={briefcase} alt="" />
                                                                                 <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                                Commerce
+                                                                               {relatedJob.category}
                                                                                 </p>
                                                                             </div>
                                                 
                                                                             <div className='flex gap-[12px]  items-center'>
                                                                                 <img src={clock} alt="" />
                                                                                 <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                                Full time
+                                                                               {relatedJob.type}
                                                                                 </p>
                                                                             </div>
                                         
                                                                             <div className='flex gap-[12px]  items-center'>
                                                                                 <img src={clock} alt="" />
                                                                                 <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                              Remote
+                                                                             {relatedJob.employment}
                                                                                 </p>
                                                                             </div>
                                                 
                                                                             <div className='flex gap-[12px]  items-center'>
                                                                                 <img src={wallet} alt="" />
                                                                                 <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                              $40000
+                                                                              ${relatedJob.salary}
                                                                                 </p>
                                                                             </div>
                                                                             <div className='flex gap-[12px]  items-center'>
                                                                                 <img src={location} alt="" />
                                                                                 <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                                New-York, USA
+                                                                                {relatedJob.location}
                                                                                 </p>
                                                                             </div>
                                                 
                                                 
                                                                         </div>
                                                 
-                                                                        <button className='xl:w-[121px] w-[98%] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
+                                                                        <button onClick={()=> handleJobClick(relatedJob.id)} className='xl:w-[121px] w-[98%] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
                                                                            Job Details
                                                                         </button>
                                                 
                                                                    </div>
                                                 
                                     </div>
+                   ) }
 
-                         <div   className=" w-[100%] mx-auto flex flex-col shadow-md mb-[40px] justify-center  gap-[28px] items-center h-[550px] xl:h-[251px] ">
-                                                                   <div className="xl:w-[92%] sm:w-[90%]  w-[85%] md:h-[100px] h-[150px] flex xl:flex-row  flex-col gap-[10px] xl:gap-[20px] xl:items-center xl:mb-0 mb-[12px] ">
-                                                                        <img src={clock}  alt="logo icon"  className='w-[40px] h-[40px]' />
-                                                                        <div className='flex flex-col'>
-                                                                            <p className='font-fig font-semibold text-[28px]'>
-                                                                            Corporate Solutions Executive
-                                                                            </p>
-                                                                            <p className='font-fig text-[16px] h-[40px] mt-[10px] '>
-                                                                            Leffler and Son
-                                                                            </p>
-                                                
-                                                                        </div>
-                                                
-                                                                   </div>
-                                                                   <div className="xl:w-[92%] sm:w-[90%]  w-[85%] xl:h-[50px]  flex gap-[30px]  xl:flex-row flex-col xl:justify-between xl:items-center   ">
-                                                                        <div className='flex gap-[24px] xl:flex-row flex-col '>
-                                                                            <div className='flex gap-[12px] items-center'>
-                                                                                <img src={briefcase} alt="" />
-                                                                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                                Commerce
-                                                                                </p>
-                                                                            </div>
-                                                
-                                                                            <div className='flex gap-[12px]  items-center'>
-                                                                                <img src={clock} alt="" />
-                                                                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                                Full time
-                                                                                </p>
-                                                                            </div>
-                                        
-                                                                            <div className='flex gap-[12px]  items-center'>
-                                                                                <img src={clock} alt="" />
-                                                                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                              Remote
-                                                                                </p>
-                                                                            </div>
-                                                
-                                                                            <div className='flex gap-[12px]  items-center'>
-                                                                                <img src={wallet} alt="" />
-                                                                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                              $40000
-                                                                                </p>
-                                                                            </div>
-                                                                            <div className='flex gap-[12px]  items-center'>
-                                                                                <img src={location} alt="" />
-                                                                                <p className='font-fig font-semibold text-[16px] text-[#6C757D] '>
-                                                                                New-York, USA
-                                                                                </p>
-                                                                            </div>
-                                                
-                                                
-                                                                        </div>
-                                                
-                                                                        <button className='xl:w-[121px] w-[98%] sm:w-[320px] xl:h-[50px] hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
-                                                                           Job Details
-                                                                        </button>
-                                                
-                                                                   </div>
-                                                
-                                    </div>
+                       
 
                     </div>
             
