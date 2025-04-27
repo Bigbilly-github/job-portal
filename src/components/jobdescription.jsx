@@ -1,4 +1,5 @@
 import briefcase from '../svg/jobsbody/briefcase.svg'
+import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import clock from '../svg/jobsbody/clock.svg'
 import wallet from '../svg/jobsbody/wallet.svg'
@@ -52,7 +53,7 @@ function JobDescription ({job} ) {
 
     return(
         <>
-        <section className=" w-[100%]  h-auto">
+        <section className=" w-[100%]  h-auto flex flex-col items-center">
             <div className="xl:w-[90%]  mx-auto sm:w-[90%] w-[85%]  flex flex-col sm:flex-row gap-[20px]" >
                 <div className="md:w-[76%] sm:w-[60%]   h-auto">
                     <h1 className=" h-[17px] font-fig font-semibold text-[24px]">
@@ -144,7 +145,7 @@ function JobDescription ({job} ) {
 
                         </div>
                     </div>
-                    <div className="mt-[70px] mb-[40px] h-auto">
+                    <div className="w-[95%] mt-[70px] mb-[40px] h-auto">
                         <h1 className="font-fig xl:w-[92%] sm:w-[90%]  w-[85%] mx-auto  text-[50px] font-semibold mb-[30px]">
                             Related Jobs
                         </h1>
@@ -214,6 +215,10 @@ function JobDescription ({job} ) {
                        
 
                     </div>
+
+                    <button className=' w-[171px]  hover:bg-slate-200  duration-200 hover:text-[#309689]  sm:h-[60px] h-[50px]  bg-[#309689] rounded-[8px] font-fig font-semibold text-[18px] text-[#FFFFFF]'>
+                       <Link to="/jobs">Back to Jobs</Link>
+                    </button>
             
         </section>
         </>

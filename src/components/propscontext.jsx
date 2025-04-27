@@ -53,7 +53,7 @@ function ContextProvider ({ children }){
       const newValue = document.querySelector(`#${id}`).value;
       setCategory(newCategory);
       setValue(newValue);
-      if (screenWidth < 500 ){
+      if (screenWidth < 600 ){
         scrollToTop()
        
 
@@ -76,7 +76,7 @@ function ContextProvider ({ children }){
       const newValue = selectedOption;
       setValue(newValue);
       setCategory(newCategory);
-      if  (screenWidth < 500 ){
+      if  (screenWidth < 600 ){
         scrollToTop()
        
 

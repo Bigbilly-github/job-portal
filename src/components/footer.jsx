@@ -18,12 +18,12 @@ function Footer (){
                     <p className='font-fig font-semibold text-[20px] text-white mb-0'>
                         Company
                     </p>
-                    <p className='mt-[14px] font-fig text-[16px] text-white  hover:opacity-70 cursor-pointer' > 
+                    <Link to="/about-us" className='mt-[14px] font-fig text-[16px] text-white  hover:opacity-70 cursor-pointer' > 
                         About Us
-                    </p>
-                    <p className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
+                    </Link>
+                    <Link to="contactus" className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
                         Contact Us
-                    </p>
+                    </Link>
                     <Link to="/jobs" className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
                        Jobs
                     </Link>
