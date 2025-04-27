@@ -26,7 +26,7 @@ function Header (){
                 </nav>
 
                 <div className='flex sm:gap-[20px]  sm:w-[161px] w-[130px]  justify-between items-center h-[40px]'>
-                  <a href="" className='w-[40px]  text-[#FFFFFF] font-fig sm:text-[16px] text-[14px]  hover:opacity-60 font-medium'>Login</a>
+                  <Link to="/signup" className='w-[40px]  text-[#FFFFFF] font-fig sm:text-[16px] text-[14px]  hover:opacity-60 font-medium'>Login</Link>
                     <button className='bg-[#309689] cursor-pointer sm:w-[101px] w-[80px]  hover:text-[#309689] hover:bg-[#FFFFFF]  h-[40px] rounded-[8px] px-[14px] font-fig text-[13px] sm:text-[16px] font-semibold text-[#FFFFFF]'>
                     Register
                     </button>

@@ -9,6 +9,7 @@ import Homepage from './pages/homepage.jsx'
 import ScrollToTop from './components/scrolltotop.jsx'
 import AboutUs from './pages/aboutus.jsx'
 import ContactUs from './pages/contactus.jsx'
+import SignUpPage from './pages/signuppage.jsx'
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path:"/contactus",
     element:<Layout><ContactUs /></Layout>,
+  },
+  {
+    path:"/signup",
+    element:<Layout><SignUpPage /></Layout>,
   }
   
   
