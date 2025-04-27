@@ -4,7 +4,7 @@ function SignUpBody (){
 
     return(
         <>
-        <section className="bg-[#30968980] sm:h-[90vh] h-[80vh]  flex justify-center items-center">
+        <section className="bg-[#30968980] sm:h-[90vh] h-[85vh]  flex justify-center items-center">
             <div className="xl:h-[87vh] xl:pb-0 sm:pb-[40px] pb-[30px] h-auto lg:w-[50%] sm:w-[70%] w-[80%] border rounded-[20px] flex flex-col items-center sm:pt-[30px] pt-[20px] bg-slate-900">
                 <h1 className=" w-[90%] text-center font-fig font-bold  lg:text-[40px] md:text-[35px]  sm:text-[30px] text-[20px] text-white">
                     Welcome to Job Portal
