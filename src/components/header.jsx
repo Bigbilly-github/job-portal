@@ -20,7 +20,7 @@ function Header (){
                     <ul className=' flex justify-between '>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/" >Home</Link></li>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/jobs">Jobs</Link></li>
-                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="">About Us</a></li>
+                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/about-us">About Us</Link></li>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="">Contact Us</a></li>
                     </ul>
                 </nav>

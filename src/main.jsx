@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Jobs from './pages/jobs.jsx'
 import Homepage from './pages/homepage.jsx'
 import ScrollToTop from './components/scrolltotop.jsx'
+import AboutUs from './pages/aboutus.jsx'
 
 
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path:"/jobs/:jobId",
     element:<Layout><Jobs /></Layout>,
+  },
+  {
+    path:"/about-us",
+    element:<Layout><AboutUs /></Layout>,
   }
   
   
