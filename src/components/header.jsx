@@ -21,7 +21,7 @@ function Header (){
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/" >Home</Link></li>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/jobs">Jobs</Link></li>
                         <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/about-us">About Us</Link></li>
-                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><a href="">Contact Us</a></li>
+                        <li className='text-[#FFFFFF] font-fig font-medium text-[16px] hover:opacity-60 '><Link to="/contactus">Contact Us</Link></li>
                     </ul>
                 </nav>
 

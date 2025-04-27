@@ -8,6 +8,7 @@ import Jobs from './pages/jobs.jsx'
 import Homepage from './pages/homepage.jsx'
 import ScrollToTop from './components/scrolltotop.jsx'
 import AboutUs from './pages/aboutus.jsx'
+import ContactUs from './pages/contactus.jsx'
 
 
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path:"/about-us",
     element:<Layout><AboutUs /></Layout>,
+  },
+  {
+    path:"/contactus",
+    element:<Layout><ContactUs /></Layout>,
   }
   
   

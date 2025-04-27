@@ -21,7 +21,7 @@ function Footer (){
                     <Link to="/about-us" className='mt-[14px] font-fig text-[16px] text-white  hover:opacity-70 cursor-pointer' > 
                         About Us
                     </Link>
-                    <Link to="contactus" className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
+                    <Link to="/contactus" className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
                         Contact Us
                     </Link>
                     <Link to="/jobs" className=' font-fig text-[16px] text-white   hover:opacity-70 cursor-pointer'> 
