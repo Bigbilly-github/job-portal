@@ -10,6 +10,7 @@ import ScrollToTop from './components/scrolltotop.jsx'
 import AboutUs from './pages/aboutus.jsx'
 import ContactUs from './pages/contactus.jsx'
 import SignUpPage from './pages/signuppage.jsx'
+import LoginPage from './pages/loginpage.jsx'
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path:"/signup",
     element:<Layout><SignUpPage /></Layout>,
+  },
+  {
+    path:"/login",
+    element:<Layout><LoginPage /></Layout>,
   }
   
   

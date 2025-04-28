@@ -1,7 +1,7 @@
+
 import { Link } from "react-router-dom"
 
-
-function SignUpBody (){
+function LoginBody (){
 
     return(
         <>
@@ -11,14 +11,10 @@ function SignUpBody (){
                     Welcome to Job Portal
                 </h1>
                 <p className=" w-[90%] font-fig  text-center  md:text-[16px] sm:text-[14px] text-[12px] text-white">
-                    Sign up to acess our latest Job Offers
+                    Log in to acess our latest Job Offers
 
                 </p>
-                <div className="flex flex-col gap-[12px] mt-[30px] w-[80%] ">
-                    <label htmlFor="name" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Your Name:</label>
-                    <input type="text" name="name" id="name"  className="sm:py-[12px] py-[6px] px-[12px] w-[100%] text-[12px]  rounded-[6px] bg-slate-100" placeholder="James Harden" required/>
 
-                </div>
 
                 <div className="flex flex-col gap-[12px] mt-[30px]  w-[80%] ">
                     <label htmlFor="email" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Your Email:</label>
@@ -33,11 +29,11 @@ function SignUpBody (){
                 </div>
 
                 <button className="w-[80%]  sm:mt-[45px] mt-[25px] hover:bg-[#30968980] h-[40px]  sm:h-[50px] duration-200 bg-[#309689] rounded-[8px] font-fig font-semibold text-[14px] sm:text-[18px]  hover:text-[#309689]   ">
-                    Sign Up
+                    Log in
                 </button>
 
                 <p className="font-fig md:text-[18px] sm:text-[16px]  text-[12px] text-white mt-[20px] sm:mt-[40px] text-center">
-                Already have an account?? &nbsp; <Link to="/login"> <span className="font-fig sm:text-[18px] text-[14px] hover:underline hover:text-slate-200  cursor-pointer text-[#a0a0c5]">Log in </span> </Link>
+                Create A new account? &nbsp; <Link to="/signup"> <span className="font-fig sm:text-[18px] text-[14px] hover:underline hover:text-slate-200  cursor-pointer text-[#a0a0c5]">Sign up</span> </Link>
                 </p>
 
 
@@ -47,6 +43,5 @@ function SignUpBody (){
         </>
     )
 
-    
 }
-export default SignUpBody
+export default LoginBody
