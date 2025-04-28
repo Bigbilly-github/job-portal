@@ -5,8 +5,8 @@ function LoginBody (){
 
     return(
         <>
-        <section className="bg-[#30968980] lg:h-[90vh] sm:h-[80vh] h-[80vh]   flex justify-center items-center">
-            <div className="xl:h-[87vh] xl:pb-0 sm:pb-[40px] pb-[30px] h-auto xl:w-[40%]  sm:w-[70%] w-[80%] border rounded-[20px] flex flex-col items-center sm:pt-[30px] pt-[20px] bg-slate-900">
+        <section className="bg-[#30968980] lg:h-[90vh] sm:h-[70vh] h-[70vh]   flex justify-center items-center">
+            <div className="xl:h-[77vh] xl:pb-0 sm:pb-[40px] pb-[30px] h-auto xl:w-[40%]  sm:w-[70%] w-[80%] border rounded-[20px] flex flex-col items-center sm:pt-[30px] pt-[20px] bg-slate-900">
                 <h1 className=" w-[90%] text-center font-fig font-bold  lg:text-[40px] md:text-[35px]  sm:text-[30px] text-[18px] text-white">
                     Welcome to Job Portal
                 </h1>
