@@ -21,10 +21,10 @@ function JobsBodySidebar (){
                 <p className="mt-[20px] font-fig font-semibold text-[20px]">
                     Location
                 </p>
-                <select name="location" id="location"   className="px-[12px] py-[10px] border-0 mt-[12px] bg-[#FFFFFF]  w-[98%] block sm:w-[180px]  md:w-[265px] rounded-[12px] font-fig font-normal text-[16px] text-[#6C757D]">
+                <select name="location" id="location"  defaultValue=""  className="px-[12px] py-[10px] border-0 mt-[12px] bg-[#FFFFFF]  w-[98%] block sm:w-[180px]  md:w-[265px] rounded-[12px] font-fig font-normal text-[16px] text-[#6C757D]">
                     <option value="" disabled selected hidden>Choose City</option>
-                    {catOptions.map((cat)=>
-                    <option value={cat}>{cat}</option>
+                    {catOptions.map((cat,index)=>
+                    <option key={index} value={cat}>{cat}</option>
                     
                     )}
                 </select>

@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
 
 const router = createBrowserRouter([
   {
-    path:"/",
+    path:"/homepage",
     element: <Layout><Homepage /></Layout>,
   },
   {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
     element:<Layout><ContactUs /></Layout>,
   },
   {
-    path:"/signup",
+    path:"/",
     element:<Layout><SignUpPage /></Layout>,
   },
   {

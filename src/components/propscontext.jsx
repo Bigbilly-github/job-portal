@@ -1,4 +1,4 @@
-import { createContext,useContext, useState } from "react";
+import { createContext,useContext,useEffect, useState } from "react";
 
 
 import logo from '../svg/recentjobs/Logo.svg'
@@ -11,6 +11,82 @@ const valueContext = createContext();
 
 
 function ContextProvider ({ children }){
+ 
+
+
+
+  const [signedupusers,setSignedUpUsers] = useState(()=>{
+    try {
+    const stored = localStorage.getItem('signedupusers');
+    return stored ? JSON.parse(stored) : [];
+  } catch (e) {
+    console.error("Invalid localStorage data:", e);
+    return [];
+  }
+});
+
+  function addSignUpDetails (signupdetails){
+    
+    setSignedUpUsers(u => ([...u, signupdetails]));
+   
+
+  }
+
+  const [logindetails,setLogInDetails] = useState({
+    
+    email:"",
+    pword:""
+  });
+
+  
+
+  function HandleLoginEmail (e){
+    if (e.target.value.trim() !=="" ){
+    
+      setLogInDetails(l=> ({...l, email:e.target.value}));
+
+  }
+
+  }
+  function HandleLoginPword (e){
+    if (e.target.value.trim() !=="" ){
+    
+      setLogInDetails(l=> ({...l, pword:e.target.value}));
+
+  }
+}
+
+  const [signupdetails,setSignUpDetails] = useState({
+                                                      name:"",
+                                                      email:"",
+                                                      pword:""
+                                                    });
+
+  function HandleSignupName (e){
+    if (e.target.value.trim() !=="" ){
+    
+      setSignUpDetails(s=> ({...s, name:e.target.value}));
+
+  }
+}
+
+  function HandleSignupEmail (e){
+    if (e.target.value.trim() !=="" ){
+    
+      setSignUpDetails(s=> ({...s, email:e.target.value}));
+
+  }
+
+  }
+  function HandleSignupPword (e){
+    if (e.target.value.trim() !=="" ){
+    
+      setSignUpDetails(s=> ({...s, pword:e.target.value}));
+
+  }
+}
+
+
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -81,13 +157,17 @@ function ContextProvider ({ children }){
        
 
     }
+}
 
-    
 
-    }
+
+    useEffect (()=> {
+      localStorage.setItem("signedupusers", JSON.stringify(signedupusers));
+    }, [signedupusers]);
+
     return(
         <>
-         <valueContext.Provider value={{AddSelectedOption,categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
+         <valueContext.Provider value={{HandleLoginEmail,HandleLoginPword,logindetails,setLogInDetails,signedupusers,setSignedUpUsers,addSignUpDetails,HandleSignupName,HandleSignupEmail,HandleSignupPword,signupdetails,setSignUpDetails,AddSelectedOption,categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
                  {children}
         </valueContext.Provider>
         </>
