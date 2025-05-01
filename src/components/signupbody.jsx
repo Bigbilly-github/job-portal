@@ -21,7 +21,7 @@ function SignUpBody (){
             if(check.length < 1){
                 addSignUpDetails(signupdetails);
                 setSignUpDetails(u => ({...u, name:"",email:"",pword:""}));
-                navigate(`/homepage`);
+                navigate("/homepage"), navigate(0);
               }
 
             else{
