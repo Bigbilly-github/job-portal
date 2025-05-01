@@ -48,8 +48,8 @@ function SignUpBody (){
                     Sign up to acess our latest Job Offers
 
                 </p>
-                <form className="w-[80%]">
-                        <div className="flex flex-col gap-[12px] mt-[30px] w-[100%] ">
+                <form className="w-[80%] ">
+                        <div className="flex flex-col gap-[12px] mt-[30px]  overflow-hidden w-[100%] ">
                             <label htmlFor="name" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Your Name:</label>
                             <input type="text" name="name" value={signupdetails.name} id="name" onChange={HandleSignupName}  className="sm:py-[12px] py-[6px] px-[12px] w-[100%] text-[12px]  rounded-[6px] bg-slate-100" placeholder="James Harden" required/>
 

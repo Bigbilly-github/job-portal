@@ -20,9 +20,7 @@ function LoginBody (){
             const check = signedupusers.filter(user => user.email===logindetails.email && user.pword===logindetails.pword);
             if(check.length > 0){
                 navigate("/homepage");
-                setTimeout( function (){
-                    alert(`Welcome ${check[0].name}`);
-                }, 250);
+
                 setLogInDetails(l => ({...l, email:"",pword:""}))
             }
 
