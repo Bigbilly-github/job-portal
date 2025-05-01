@@ -19,8 +19,8 @@ function LoginBody (){
         if (isSignUpDetailsValid(logindetails)) {
             const check = signedupusers.filter(user => user.email===logindetails.email && user.pword===logindetails.pword);
             if(check.length > 0){
-                navigate("/homepage");
-                navigate(0);
+                navigate("/homepage"), navigate(0);
+
 
 
                 setLogInDetails(l => ({...l, email:"",pword:""}))
