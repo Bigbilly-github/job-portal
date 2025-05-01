@@ -11,6 +11,12 @@ const valueContext = createContext();
 
 
 function ContextProvider ({ children }){
+
+  const [newsemail, setNewsEmail] = useState("");
+
+  function HandleNewsEmail (e) {
+    setNewsEmail(e.target.value);
+  }
  
 
 
@@ -167,7 +173,7 @@ function ContextProvider ({ children }){
 
     return(
         <>
-         <valueContext.Provider value={{HandleLoginEmail,HandleLoginPword,logindetails,setLogInDetails,signedupusers,setSignedUpUsers,addSignUpDetails,HandleSignupName,HandleSignupEmail,HandleSignupPword,signupdetails,setSignUpDetails,AddSelectedOption,categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
+         <valueContext.Provider value={{HandleNewsEmail,setNewsEmail,newsemail,HandleLoginEmail,HandleLoginPword,logindetails,setLogInDetails,signedupusers,setSignedUpUsers,addSignUpDetails,HandleSignupName,HandleSignupEmail,HandleSignupPword,signupdetails,setSignUpDetails,AddSelectedOption,categoryOptions, selectedOption, setSelectedOption, HandleChange,  ChangeValue, limit, setLimit,getLogo, value, setValue, category, setCategory, ToUp}}>
                  {children}
         </valueContext.Provider>
         </>
