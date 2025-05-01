@@ -50,22 +50,31 @@ function LoginBody (){
 
                 </p>
 
+                <form className="w-[80%]" onSubmit={()=>Login(isSignUpDetailsValid,logindetails,signedupusers)} >
+                        <div className="flex flex-col gap-[12px] mt-[30px]  w-[100%] ">
+                            <label htmlFor="loginemail" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Your Email:</label>
+                            <input type="email" name="loginemail" id="loginemail" value={logindetails.email}  onChange={HandleLoginEmail} className="sm:py-[12px] py-[6px] text-[12px] px-[12px] w-[100%] rounded-[6px] bg-slate-100" placeholder="email@gmail.com" required/>
 
-                <div className="flex flex-col gap-[12px] mt-[30px]  w-[80%] ">
-                    <label htmlFor="loginemail" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Your Email:</label>
-                    <input type="email" name="loginemail" id="loginemail" value={logindetails.email}  onChange={HandleLoginEmail} className="sm:py-[12px] py-[6px] text-[12px] px-[12px] w-[100%] rounded-[6px] bg-slate-100" placeholder="email@gmail.com" required/>
+                        </div>
 
-                </div>
+                        <div className="flex flex-col gap-[12px] mt-[30px]  w-[100%] ">
+                            <label htmlFor="loginpword" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Enter Password:</label>
+                            <input type="password" name="loginpword" id="loginpword" value={logindetails.pword} onChange={HandleLoginPword}  className="sm:py-[12px] py-[6px] text-[12px] px-[12px] w-[100%] rounded-[6px] bg-slate-100" placeholder="***************" required
+                                minLength={8}
+                                pattern="^[A-Z][A-Za-z\d]{7,}$"
+                                 title="Must start with a capital letter, be at least 8 characters, and contain at least one number."
+                            />
 
-                <div className="flex flex-col gap-[12px] mt-[30px]  w-[80%] ">
-                    <label htmlFor="loginpword" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Enter Password:</label>
-                    <input type="password" name="loginpword" id="loginpword" value={logindetails.pword} onChange={HandleLoginPword}  className="sm:py-[12px] py-[6px] text-[12px] px-[12px] w-[100%] rounded-[6px] bg-slate-100" placeholder="***************" required/>
+                        </div>
 
-                </div>
+                        <button type="submit" className="w-[100%]  sm:mt-[45px] mt-[25px] hover:bg-[#30968980] h-[40px]  sm:h-[50px] duration-200 bg-[#309689] rounded-[8px] font-fig font-semibold text-[14px] sm:text-[18px]  hover:text-[#309689]   ">
+                            Log in
+                        </button>
 
-                <button onClick={()=>Login(isSignUpDetailsValid,logindetails,signedupusers)} className="w-[80%]  sm:mt-[45px] mt-[25px] hover:bg-[#30968980] h-[40px]  sm:h-[50px] duration-200 bg-[#309689] rounded-[8px] font-fig font-semibold text-[14px] sm:text-[18px]  hover:text-[#309689]   ">
-                    Log in
-                </button>
+                </form>
+
+
+
 
                 <p className="font-fig md:text-[18px] sm:text-[16px]  text-[12px] text-white mt-[20px] sm:mt-[40px] text-center">
                 Create A new account? &nbsp; <Link to="/"> <span className="font-fig sm:text-[18px] text-[14px] hover:underline hover:text-slate-200  cursor-pointer text-[#a0a0c5]">Sign up</span> </Link>

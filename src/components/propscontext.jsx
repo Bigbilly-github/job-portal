@@ -47,19 +47,19 @@ function ContextProvider ({ children }){
   
 
   function HandleLoginEmail (e){
-    if (e.target.value.trim() !=="" ){
+   
     
       setLogInDetails(l=> ({...l, email:e.target.value}));
 
-  }
+
 
   }
   function HandleLoginPword (e){
-    if (e.target.value.trim() !=="" ){
+   
     
       setLogInDetails(l=> ({...l, pword:e.target.value}));
 
-  }
+
 }
 
   const [signupdetails,setSignUpDetails] = useState({
@@ -69,27 +69,24 @@ function ContextProvider ({ children }){
                                                     });
 
   function HandleSignupName (e){
-    if (e.target.value.trim() !=="" ){
+ 
     
       setSignUpDetails(s=> ({...s, name:e.target.value}));
 
-  }
+
 }
 
   function HandleSignupEmail (e){
-    if (e.target.value.trim() !=="" ){
+   
     
       setSignUpDetails(s=> ({...s, email:e.target.value}));
-
-  }
-
-  }
+    }
   function HandleSignupPword (e){
-    if (e.target.value.trim() !=="" ){
+    
     
       setSignUpDetails(s=> ({...s, pword:e.target.value}));
 
-  }
+
 }
 
 

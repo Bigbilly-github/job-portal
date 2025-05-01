@@ -48,10 +48,10 @@ function SignUpBody (){
                     Sign up to acess our latest Job Offers
 
                 </p>
-                <form className="w-[80%] ">
+                <form className="w-[80%]" onSubmit={()=>SignUp(addSignUpDetails,signupdetails,signedupusers)} >
                         <div className="flex flex-col gap-[12px] mt-[30px]  overflow-hidden w-[100%] ">
-                            <label htmlFor="name" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Your Name:</label>
-                            <input type="text" name="name" value={signupdetails.name} id="name" onChange={HandleSignupName}  className="sm:py-[12px] py-[6px] px-[12px] w-[100%] text-[12px]  rounded-[6px] bg-slate-100" placeholder="James Harden" required/>
+                            <label htmlFor="name" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Username:</label>
+                            <input type="text" name="name" value={signupdetails.name} id="name" onChange={HandleSignupName}  className="sm:py-[12px] py-[6px] px-[12px] w-[100%] text-[12px]  rounded-[6px] bg-slate-100" placeholder="James" required/>
 
                         </div>
 
@@ -63,16 +63,21 @@ function SignUpBody (){
 
                         <div className="flex flex-col gap-[12px] mt-[30px]  w-[100%] ">
                             <label htmlFor="pword" className="text-white font-fig lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px]">Enter Password:</label>
-                            <input type="password" name="pword" id="pword" value={signupdetails.pword} onChange={HandleSignupPword}  className="sm:py-[12px] py-[6px] text-[12px] px-[12px] w-[100%] rounded-[6px] bg-slate-100" placeholder="***************" required/>
+                            <input type="password" name="pword" id="pword" value={signupdetails.pword} onChange={HandleSignupPword}  className="sm:py-[12px] py-[6px] text-[12px] px-[12px] w-[100%] rounded-[6px] bg-slate-100" placeholder="***************" minLength={8}
+                                pattern="^[A-Z][A-Za-z\d]{7,}$"
+                                required title="Must start with a capital letter, be at least 8 characters, and contain at least one number."
+                            />
 
                         </div>
+
+                    <button type="submit" className="w-[100%]  sm:mt-[45px] mt-[25px] hover:bg-[#30968980] h-[40px]  sm:h-[50px] duration-200 bg-[#309689] rounded-[8px] font-fig font-semibold text-[14px] sm:text-[18px]  hover:text-[#309689]   ">
+                    Sign Up
+                </button>
 
                 </form>
 
 
-                <button onClick={()=>SignUp(addSignUpDetails,signupdetails,signedupusers)} className="w-[80%]  sm:mt-[45px] mt-[25px] hover:bg-[#30968980] h-[40px]  sm:h-[50px] duration-200 bg-[#309689] rounded-[8px] font-fig font-semibold text-[14px] sm:text-[18px]  hover:text-[#309689]   ">
-                    Sign Up
-                </button>
+              
 
                 <p className="font-fig md:text-[18px] sm:text-[16px]  text-[12px] text-white mt-[20px] sm:mt-[40px] text-center">
                 Already have an account?? &nbsp; <Link to="/login"> <span className="font-fig sm:text-[18px] text-[14px] hover:underline hover:text-slate-200  cursor-pointer text-[#a0a0c5]">Log in </span> </Link>
