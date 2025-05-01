@@ -44,7 +44,7 @@ function Hero (){
 
     return(
         <>
-        <section className="w-full lg:h-[604px] h-[550px] bg-black flex pt-[140px] justify-center">
+        <section className="w-full animate-fadeIn lg:h-[604px] h-[550px] bg-black flex pt-[140px] justify-center">
             <div className="lg:w-[905px] lg:h-[394px] sm:w-[553px] md:w-[653px] w-[453px] h-[621px]  flex flex-col items-center ">
                 <h1 className="lg:w-[903px] lg:h-[80px] sm:w-[553px]  md:w-[653px]  w-[453px] h-[60px] text-center font-fig  md:text-[50px] sm:text-[40px] text-[25px] lg:text-[70px] text-white font-bold mb-0 ">
                 Find Your Dream Job Today!

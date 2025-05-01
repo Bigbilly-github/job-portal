@@ -20,7 +20,7 @@ function RecentJobs (){
       
       return(
         <>
-        <section className="w-[100vw] lg:h-[1618px] sm:h-[3000px] h-[3400px] bg-white lg:px-[72px] px-[20px] pt-[60px] ">
+        <section className="w-[100vw] animate-fadeIn lg:h-[1618px] sm:h-[3000px] h-[3400px] bg-white lg:px-[72px] px-[20px] pt-[60px] ">
             <h1 className="lg:w-[507px] h-[35px] font-fig  text-[28px] text-center lg:text-left lg:text-[50px] font-bold">
             Recent Jobs Available
             </h1>

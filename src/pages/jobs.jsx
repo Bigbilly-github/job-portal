@@ -16,7 +16,7 @@ function Jobs (){
     return(
         <>
         <Header/>
-        <main>
+        <main >
             <JobsHero  text={jobId ? "Job Details" : "Jobs"}/>
            {jobId ?  <JobsDetails jobId={jobId}/> : <JobsBody/>}
            

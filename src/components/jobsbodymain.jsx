@@ -20,7 +20,7 @@ function JobsBodyMain (){
 
     return(
         <>
-          <div  className="xl:w-[100%] sm:w-[80%] w-[90%]  h-auto   "> 
+          <div  className="xl:w-[100%] sm:w-[80%] w-[90%] animate-fadeIn  h-auto   "> 
            { newJobs.slice(0,limit).map((job,index)=> <JobsDisplay job={job} getLogo={getLogo} index={index} />)}
 
             <div className="w-[100%] flex justify-center mt-[90px] ">

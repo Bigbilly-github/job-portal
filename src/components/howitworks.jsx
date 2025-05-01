@@ -31,7 +31,7 @@ function HowItWorks (){
     ]
     return(
         <>
-        <section className="w-full h-auto flex flex-col gap-[60px] mb-[100px] items-center pt-[60px]">
+        <section className="w-full h-auto animate-fadeIn flex flex-col gap-[60px] mb-[100px] items-center pt-[60px]">
             <div className="w-[646px] h-auto">
                 <h1 className="font-fig font-bold md:text-[40px] lg:text-[50px] text-[30px]  text-center">
                 How it works

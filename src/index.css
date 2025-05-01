@@ -3,7 +3,6 @@
 
 @theme{
   --font-fig: "Figtree" ;
- 
 }
 
 body{
@@ -20,4 +19,13 @@ html, body {
 
 #root {
   overflow-x: hidden;
+}
+@keyframes fadeIn {
+  from {
+  transform: translateY(200px);
+  }
+
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
 }

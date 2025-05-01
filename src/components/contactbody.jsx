@@ -34,7 +34,7 @@ function ContactBody () {
 
     return(
         <>
-        <section className="w-full h-auto  flex justify-center ">
+        <section className="w-full h-auto  animate-fadeIn flex justify-center ">
             <div className="w-[90%] lg:h-[400px] sm:h-[600px] h-[450px] sm:pt-0 lg:pt-[120px]   pt-[50px] flex  items-center gap-[58px]">
                 <div className="w-[100%] h-[459px] flex flex-col items-center ">
                     <h1 className="font-fig font-bold md:text-[50px] sm:text-[40px]  text-[30px] mb-0">
